@@ -1,0 +1,12 @@
+{
+  "name": "com.netease.metaverse",
+  "displayName": "NetEase.Metaverse Frame Work",
+  "unity": "2017.1",
+  "description": "MetaVerse Game Development Frame Work",
+  "author": {
+    "name": "NetEase-Tech"
+  },
+  "version": "0.0.1",
+  "dependencies": {
+  }
+}

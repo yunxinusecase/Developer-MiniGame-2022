@@ -1,0 +1,103 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+using Mini.Battle.Core;
+
+namespace Mini.Battle.UI
+{
+    public class OwnTextureCellItem : TextureCellItem
+    {
+        public Button mBtnVideoToggle;
+        public Text mTxtVideo;
+        public Button mBtnAudioToggle;
+        public Text mTxtAudio;
+        public Button mBtnAvatarToggle;
+        public Text mTxtAvatar;
+
+        private bool mVideoStatus = true;
+        private bool mAvatarStatus = false;
+        private bool mAudioStatus = true;
+
+        private string TAG = "OwnTextureCellItem";
+
+        private string Tips_OpenVideo = "开启视频";
+        private string Tips_CloseVideo = "关闭视频";
+
+        private string Tips_EnableAvatar = "开启虚拟人";
+        private string Tips_DisableAvatar = "关闭虚拟人";
+
+        private string Tips_OpenAudio = "开启音频";
+        private string Tips_CloseAudio = "关闭音频";
+
+        protected override void Awake()
+        {
+            mBtnVideoToggle.onClick.AddListener(OnClickVideo);
+            mBtnAudioToggle.onClick.AddListener(OnClickAudio);
+            mBtnAvatarToggle.onClick.AddListener(OnClickAvatar);
+            ResetStatus();
+        }
+
+        private void ResetStatus()
+        {
+            mVideoStatus = true;
+            mAvatarStatus = false;
+            mAudioStatus = true;
+            RefreshText(mVideoStatus, mTxtVideo, Tips_CloseVideo, Tips_OpenVideo);
+            RefreshText(mAvatarStatus, mTxtAvatar, Tips_DisableAvatar, Tips_EnableAvatar);
+            RefreshText(mAudioStatus, mTxtAudio, Tips_CloseAudio, Tips_OpenAudio);
+        }
+
+        public override void AddCell(ulong uid)
+        {
+            base.AddCell(uid);
+            ResetStatus();
+        }
+
+        private void RefreshText(bool hason, Text input, string onText, string disableText)
+        {
+            input.text = hason ? onText : disableText;
+        }
+
+        private void OnClickVideo()
+        {
+            YXUnityLog.LogInfo(TAG, "OnClickVideo()");
+            if (mVideoStatus)
+            {
+                GameManager.Instance.RTCLogic.StopOwnVideo();
+            }
+            else
+            {
+                GameManager.Instance.RTCLogic.StartOwnVideo();
+            }
+            mVideoStatus = !mVideoStatus;
+            RefreshText(mVideoStatus, mTxtVideo, Tips_CloseVideo, Tips_OpenVideo);
+        }
+
+        private void OnClickAudio()
+        {
+            YXUnityLog.LogInfo(TAG, "OnClickAudio()");
+            if (mAudioStatus)
+            {
+                GameManager.Instance.RTCLogic.StopOwnAudio();
+            }
+            else
+            {
+                GameManager.Instance.RTCLogic.StartOwnAudio();
+            }
+            mAudioStatus = !mAudioStatus;
+            RefreshText(mAudioStatus, mTxtAudio, Tips_CloseAudio, Tips_OpenAudio);
+        }
+
+        private void OnClickAvatar()
+        {
+            YXUnityLog.LogInfo(TAG, "OnClickAvatar");
+            if (mAvatarStatus)
+                GameManager.Instance.RTCLogic.DisableAnimoji();
+            else
+                GameManager.Instance.RTCLogic.EnableAnimoji();
+            mAvatarStatus = !mAvatarStatus;
+            RefreshText(mAvatarStatus, mTxtAvatar, Tips_DisableAvatar, Tips_EnableAvatar);
+        }
+    }
+}

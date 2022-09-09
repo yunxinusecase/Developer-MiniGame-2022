@@ -1,0 +1,7 @@
+{
+  "author": "NetEase-Tech",
+  "description": "MetaVerse Log System\n1\u3001\u652f\u6301\u672c\u5730\u65e5\u5fd7\u6587\u4ef6\u4fdd\u5b58\n2\u3001\u7b2c\u4e09\u65b9Serilog\u5e93\n3\u3001\u8bf7\u6dfb\u52a0Scripting Define Symbols\uff1aENABLE_YUNXIN_LOGGER",
+  "displayName": "NetEase.MetaVerse Logger",
+  "name": "com.netease.com.netase.metaverse.logger",
+  "version": "0.0.1"
+}

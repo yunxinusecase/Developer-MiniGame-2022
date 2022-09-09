@@ -1,0 +1,16 @@
+{
+  "name": "com.netease.metaverse.animoji",
+  "displayName": "NetEase.Animoji",
+  "version": "0.0.1",
+  "unity": "2017.1",
+  "description": "NetEase Animoji FrameWork",
+  "keywords": [
+	"GameAnimoji"
+  ],
+   "samples": [
+   {
+     "displayName": "Animoji Example",
+     "description": "NetEase YunXin Game Animoji",
+     "path": "Samples~/YunXin.AnimojiExample"
+   }]
+}

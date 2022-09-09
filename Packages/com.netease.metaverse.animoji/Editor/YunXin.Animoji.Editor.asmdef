@@ -1,0 +1,18 @@
+{
+    "name": "YunXin.Animoji.Editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:611f01a6cb83ad746bb29768e0b8a393"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
