@@ -27,7 +27,7 @@ Assets/
 Before starting the demo project, make sure your development environment meets the following requirements:
 - Unity 2020 or later
 - Windows
-- [Download RTCSDK (v4.5.907)]()
+- [Download RTCSDK (v4.5.907)](https://yx-web-nosdn.netease.im/package/1662715423977/nertc-unity-sdk-4.5.907.7z?download=nertc-unity-sdk-4.5.907.7z)
 - [Download IMSDK (v2.4.1)](https://doc.yunxin.163.com/all/sdk-download?platform=unity)
 
 ### Prerequisites
@@ -46,7 +46,7 @@ Before starting the demo project, make sure your development environment meets t
 3. Move the com.netease.game.rtc-4.5.907 file in the SDK package to the Packages directory.
 4. Open the Package Manager of Unity Editor. Click the + icon in the top-left corner, click Add Package from tarball..., and select the com.netease.game.rtc-4.5.907 file in the Packages directory.
 5. Double click UNITY_IM_SDK_2.4.1.unitypackage. （**Demo has already integrated IMSDK. You do not repeat the import operation**）
-6. Open the scene file, Scenes/BattleScene.unity
+6. Open the scene file, Scenes/BattleMain.unity
 7. Open Assets/Scripts/GameConst.cs and specify the AppKey of your project and IM login credentials
 8. Click Run to try the demo app by clicking RUN.
 

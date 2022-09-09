@@ -1,5 +1,5 @@
 # 2022开发者大赛，音视频相关Unity Demo
-_其他语言: [英文](README_EN.md)_
+_其他语言: [English](README_EN.md)_
 
 基于云信IM，RTC，虚拟人表情，空间音效能力，创建的局域网多人在线MiniGame，用户可以使用该Demo体验相关能力给相关产品赋能虚拟社交能力。
 
@@ -26,7 +26,7 @@ _其他语言: [英文](README_EN.md)_
 在开始运行示例项目之前，请确保开发环境满足以下要求：  
 - Unity 2020及以上版本  
 - Windows开发平台  
-- [下载RTCSDK开发包(v4.5.907)]()
+- [下载RTCSDK开发包(v4.5.907)](https://yx-web-nosdn.netease.im/package/1662715423977/nertc-unity-sdk-4.5.907.7z?download=nertc-unity-sdk-4.5.907.7z)
 - [下载IMSDK开发包(v2.4.1)](https://doc.yunxin.163.com/all/sdk-download?platform=unity)
 
 ### 前提条件
@@ -44,7 +44,7 @@ _其他语言: [英文](README_EN.md)_
 3. 把下载到的 SDK 文件com.netease.game.rtc-4.5.907放到Packages目录。
 4. 打开Unity Editor的Package Manager，单击左上角“+”图标，单击"Add Package from tarball..."，选中Packages目录下的com.netease.game.rtc-4.5.907文件，即可完成导入。
 5. 点击运行UNITY_IM_SDK_2.4.1.unitypackage，import IMSDK开发包内容。（**Demo已经集成，无需重复Import**）
-6. 打开场景文件Scenes/BattleScene.unity
+6. 打开场景文件Scenes/BattleMain.unity
 7. 打开Assets/Scripts/GameConst.cs 文件填写APPKEY和IM登录信息
 8. 点击运行即可体验Demo
 
@@ -84,4 +84,3 @@ Demo提供了四个角色可控选择（角色使用的ReadyPlayMe平台创建�
 - [API参考](https://doc.yunxin.163.com/all/api-refer)
 - [知识库](https://faq.yunxin.163.com/kb/main/#/)
 - [提交工单](https://app.yunxin.163.com/index#/issue/submit)
-
